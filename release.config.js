@@ -5,9 +5,6 @@ module.exports = {
   branches: ["main"],
   repositoryUrl: "https://github.com/Teejeeh/Angular-IndexedDB-ORM",
   plugins: [
-    ["@semantic-release/commit-analyzer", {
-      preset: "conventionalcommits"
-    }],
     ["@semantic-release/release-notes-generator", {
       preset: "conventionalcommits"
     }],
