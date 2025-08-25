@@ -28,9 +28,6 @@ module.exports = {
       npmPublish: true,
       pkgRoot: "dist"
     }],
-    ["@semantic-release/github", {
-      assets: []
-    }],
     ["@semantic-release/git", {
       assets: ["CHANGELOG.md", "package.json"],
       message: "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"

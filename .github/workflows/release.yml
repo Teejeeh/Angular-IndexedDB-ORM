@@ -36,12 +36,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release --ci --extends ./release.config.js
 
-      - name: Publish to GitHub Packages
-        if: success()
-        env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          npm_config_registry: https://npm.pkg.github.com
-        run: |
-          echo "@teejeeh:registry=https://npm.pkg.github.com" > ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-          npm publish ./dist
+  # GitHub Packages publish removed; npm only
