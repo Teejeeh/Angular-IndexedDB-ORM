@@ -30,7 +30,7 @@ jobs:
 
       - name: Configure npm for GitHub Packages
         run: |
-          echo "@teejeeh:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "@teejeeh:registry=https://npm.pkg.github.com" > ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -38,4 +38,5 @@ jobs:
       - name: Publish
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npm_config_registry: https://npm.pkg.github.com
         run: npm publish ./dist
