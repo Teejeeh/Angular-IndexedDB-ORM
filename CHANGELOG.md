@@ -1,3 +1,7 @@
+## <small>0.1.6 (2025-08-25)</small>
+
+* bump: v0.1.5 ([1dc1216](https://github.com/Teejeeh/Angular-IndexedDB-ORM/commit/1dc1216))
+
 ## <small>0.1.5 (2025-08-25)</small>
 
 * bump: 0.1.4 ([d8665af](https://github.com/Teejeeh/Angular-IndexedDB-ORM/commit/d8665af))
