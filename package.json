@@ -1,10 +1,10 @@
 {
-  "name": "indexeddb-orm",
+  "name": "@teejeeh/indexeddb-orm",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build indexeddb-orm",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,8 +20,11 @@
       }
     ]
   },
-  "private": true,
+  "private": false,
   "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "peerDependencies": {
     "@angular/common": "^19.2.14",
     "@angular/core": "^19.2.14",
