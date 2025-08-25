@@ -27,7 +27,6 @@ jobs:
 
       - name: Build library
         run: npm run build
-
       - name: Configure npm for GitHub Packages
         run: |
           echo "@teejeeh:registry=https://npm.pkg.github.com" > ~/.npmrc

@@ -6,8 +6,8 @@ import { buildSchema, getVersion } from './schema';
 export class Database extends dexie {
     private initialized = false;
 
-    constructor(name?: string) {
-        super(name ?? 'default');
+    constructor(name: string) {
+        super(name);
         this.init();
     }
 

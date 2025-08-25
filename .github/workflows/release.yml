@@ -30,15 +30,18 @@ jobs:
       - name: Build library
         run: npm run build
 
-      - name: Set up npm auth for GitHub Packages
-        run: |
-          echo "@teejeeh:registry=https://npm.pkg.github.com" >> ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release --ci --extends ./release.config.js
+
+      - name: Publish to GitHub Packages
+        if: success()
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npm_config_registry: https://npm.pkg.github.com
+        run: |
+          echo "@teejeeh:registry=https://npm.pkg.github.com" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+          npm publish ./dist
