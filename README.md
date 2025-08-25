@@ -57,3 +57,14 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## How to publish:
+
+Bump version in package.json.
+Push a tag:
+
+```git tag v0.0.1
+git push origin v0.0.1
+```
+
+The action will build and publish @teejeeh/indexeddb-orm to GitHub Packages.
