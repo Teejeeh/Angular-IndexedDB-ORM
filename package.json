@@ -1,6 +1,6 @@
 {
   "name": "@teejeeh/indexeddb-orm",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -27,11 +27,11 @@
   },
   "peerDependencies": {
     "@angular/common": "^20.0.0",
-    "@angular/core": "^20.0.0",
-    "dexie": "^4.2.1"
+    "@angular/core": "^20.0.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "dexie": "^4.2.1"
   },
   "devDependencies": {
     "@angular/build": "^20.0.0",
