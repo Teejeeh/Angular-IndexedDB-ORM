@@ -35,6 +35,7 @@ jobs:
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ''
         run: npx semantic-release --ci --extends ./release.config.js
 
   # GitHub Packages publish removed; npm only
