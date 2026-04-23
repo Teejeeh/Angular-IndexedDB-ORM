@@ -1,3 +1,9 @@
+## [0.1.9](https://github.com/Teejeeh/Angular-IndexedDB-ORM/compare/v0.1.8...v0.1.9) (2026-04-23)
+
+### Bug Fixes
+
+* add repository information to package.json ([9269d54](https://github.com/Teejeeh/Angular-IndexedDB-ORM/commit/9269d54e796b6aba51cd12c18e0a05085ce2e5ee))
+
 ## [0.1.8](https://github.com/Teejeeh/Angular-IndexedDB-ORM/compare/v0.1.7...v0.1.8) (2026-04-23)
 
 ### Bug Fixes
