@@ -1,6 +1,10 @@
 {
   "name": "@teejeeh/indexeddb-orm",
   "version": "0.1.9",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Teejeeh/Angular-IndexedDB-ORM"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
